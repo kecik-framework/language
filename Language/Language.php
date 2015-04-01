@@ -34,8 +34,7 @@ class Language {
 				$this->lang[$code] = json_decode($langjson);
 			}
 		} 
-
-		print_r($this->lang);
+		
 	}
 
 	public function __call($code, $args) {
