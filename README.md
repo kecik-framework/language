@@ -28,8 +28,9 @@ Library/Pustaka ini membutuhkan sebuah file dalam format json sebagai kamus baha
 	}
 }
 ```
+
 >nama file: **lang_us.json**
-```
+```json
 {
 	"signin": "Sign In",
 	"form": {
