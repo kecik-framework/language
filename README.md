@@ -6,7 +6,7 @@ file composer.json
 ```json
 {
 	"require": {
-		"kecik/language": "dev-master"
+		"kecik/language": "1.0.*@dev"
 	}
 }
 ```
