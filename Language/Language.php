@@ -30,7 +30,7 @@ class Language {
 	public function __construct(array $lang) {
 		if (is_array($lang)) {
 			while (list($code, $langFile) = each($lang)) {
-				$langjson = file_get_contents(ROUTE::$BASEURL.$langFile);
+				$langjson = file_get_contents($langFile);
 				$this->lang[$code] = json_decode($langjson);
 			}
 		} 
