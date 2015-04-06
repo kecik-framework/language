@@ -45,7 +45,8 @@ class Language {
 
 		$lang = null;
 		if (count($subs)<=0) {
-			$lang = $this->lang[$code]->$word;
+			if (isset($this->lang[$code]->$word))
+				$lang = $this->lang[$code]->$word;
 		} else {
 			$prev = $this->lang[$code];
 			while (list($id, $sub) = each($subs)) {
