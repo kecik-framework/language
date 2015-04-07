@@ -1,8 +1,9 @@
 **Kecik Language**
 ================
+A library created specifically Kecik Framework, this library was made for ease in making use of multi-language projects.
 
-## Cara Installasi
-file composer.json
+## **Installation**
+composer.json files
 ```json
 {
 	"require": {
@@ -11,12 +12,12 @@ file composer.json
 }
 ```
 
-Jalankan perintah
+Run a command
 ```shell
 composer install
 ```
 
-Library/Pustaka ini membutuhkan sebuah file dalam format json sebagai kamus bahasa. Contoh isi file json.
+This library requires a file in json format as a dictionary. Examples json file contents.
 >nama file: **lang_id.json**
 ```json
 {
@@ -41,7 +42,7 @@ Library/Pustaka ini membutuhkan sebuah file dalam format json sebagai kamus baha
 }
 ```
 
-## Contoh penggunaan
+## **Example Using**
 ```php
 <?php
 require "vendor/autoload.php";
@@ -63,3 +64,4 @@ $app->get('/', function() use ($lang){
 $app->run();
 ?>
 ```
+
