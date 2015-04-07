@@ -1,31 +1,38 @@
 <?php
+/*///////////////////////////////////////////////////////////////
+ /** ID: | /-- ID: Indonesia
+ /** EN: | /-- EN: English
+ ///////////////////////////////////////////////////////////////*/
+
 /**
- * Language - Library untuk framework kecik, library ini khusus untuk membantu masalah bahasa 
- *
+ * ID: Language - Library untuk Kecik Framework, library ini khusus untuk membantu masalah bahasa 
+ * EN: Language - Library for Kecik Frameowk, this library specially for help language problem
+ * 
  * @author 		Dony Wahyu Isp
  * @copyright 	2015 Dony Wahyu Isp
- * @link 		http://github.io/kecik_language
+ * @link 		http://github.com/kecik-framework/language
  * @license		MIT
- * @version 	1.0-alpha
+ * @version 	1.0.1-alpha
  * @package		Kecik\Language
  **/
 namespace Kecik;
 
 /**
- * Controller
+ * Language
  * @package 	Kecik\Language
  * @author 		Dony Wahyu Isp
- * @since 		1.0-alpha
+ * @since 		1.0.0-alpha
  **/
 
 class Language {
+	/**
+	 * @var array $lang
+	 **/
 	private $lang = array();
 
 	/**
-	 * $lang = new Kecik\Language(array(
-	 *		'id'=>'lang_id.json',
-	 *		'us'=>'lang_us.json'
-	 * ));
+	 * Contructor
+	 * @param array $lang
 	 **/
 	public function __construct(array $lang) {
 		if (is_array($lang)) {
@@ -37,9 +44,12 @@ class Language {
 		
 	}
 
+	/**
+	 * Overide Call
+	 **/
 	public function __call($code, $args) {
 		$word = $args[0];
-		$subs=array();
+		$subs = array();
 		if (isset($args[1])) 
 			$subs = $args[1];
 
