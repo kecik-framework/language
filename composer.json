@@ -1,6 +1,6 @@
 {
     "name": "kecik/language",
-    "description": "Language Class untuk Kecik Framework",
+    "description": "Language Libararies for Kecik Framework",
     "keywords": ["kecik", "framework", "language"],
     "license": "MIT",
     "authors": [
