@@ -28,7 +28,7 @@ class Language {
 	/**
 	 * @var array $lang
 	 **/
-	private $lang = array();
+	private $lang = [];
 
 	/**
 	 * Contructor
@@ -37,7 +37,10 @@ class Language {
 	public function __construct(array $lang) {
 		if (is_array($lang)) {
 			while (list($code, $langFile) = each($lang)) {
-				$langjson = file_get_contents($langFile);
+				$myfile = fopen($langFile, "r");
+				$langjson = fread($myfile,filesize($langFile));
+				fclose($myfile);
+				//$langjson = file_get_contents($langFile);
 				$this->lang[$code] = json_decode($langjson);
 			}
 		} 
@@ -49,7 +52,7 @@ class Language {
 	 **/
 	public function __call($code, $args) {
 		$word = $args[0];
-		$subs = array();
+		$subs = [];
 		if (isset($args[1])) 
 			$subs = $args[1];
 
