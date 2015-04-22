@@ -37,6 +37,7 @@ class Language {
 	public function __construct(array $lang) {
 		if (is_array($lang)) {
 			while (list($code, $langFile) = each($lang)) {
+				$langFile = Config::get('path.basepath').$langFile;
 				$myfile = fopen($langFile, "r");
 				$langjson = fread($myfile,filesize($langFile));
 				fclose($myfile);
